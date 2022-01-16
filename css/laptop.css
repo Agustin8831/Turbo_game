@@ -1,0 +1,100 @@
+.hdr {
+  height: 30rem;
+}
+.navbar {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.37);
+  height: 10rem;
+}
+.logo {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+}
+.icon-mando {
+  width: 5rem;
+  margin: 0;
+}
+.title-hdr {
+  margin-left: 1rem;
+}
+.nav {
+  width: 40rem;
+  margin: 0 2rem 0 0;
+}
+.main {
+  position: relative;
+}
+.contenedor-games {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.card-sugerencias {
+  width: 35rem;
+  padding: 2rem 2rem 2rem 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.top-descargas {
+  height: 40%;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+.games-cont {
+  padding: 2rem;
+  height: 58rem;
+}
+.slide-cont {
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(8, auto);
+}
+.requisitos-pc {
+  height: 40%;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+.requisitos-pc .title-requisitos {
+  display: flex;
+  justify-content: center;
+  color: var(--color-white);
+  height: 5rem;
+  border-bottom: 2px solid red;
+  margin-bottom: 2rem;
+}
+.requisitos-pc .title-requisitos h2 {
+  font-size: var(--md);
+  font-weight: 300;
+}
+.requisitos-pc > div {
+  flex-direction: column;
+  height: 100%;
+}
+.card-requisito__p {
+  font-size: var(--lg);
+}
+.ultimos-juegos {
+  height: 20%;
+}
+.card-cont {
+  max-width: 100%;
+}
+.card {
+  width: 47%;
+  max-width: 30rem;
+  height: 40rem;
+}
+.btn-dowload {
+  width: 80%;
+  bottom: 2rem;
+}
+.btn-mas-inf {
+  width: 80%;
+  max-width: 30rem;
+  bottom: -1rem;
+}

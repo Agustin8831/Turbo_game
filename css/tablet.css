@@ -1,0 +1,54 @@
+.img-fondo-hdr {
+  width: 100%;
+}
+.top-descargas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title-descargas {
+  max-width: 60rem;
+}
+.games-cont {
+  max-width: 60rem;
+  padding: 2rem 0;
+}
+.slide-cont {
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(4, auto);
+}
+.requisitos-pc {
+  display: flex;
+  justify-content: center;
+}
+.requisitos-pc {
+  width: 100%;
+  overflow: hidden;
+}
+.requisitos-pc > div {
+  width: 100%;
+  max-width: 60rem;
+  flex-direction: row;
+}
+.card-requisito {
+  flex-grow: 1;
+}
+.card-cont {
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  width: 22rem;
+  height: 44rem;
+}
+.btn-dowload {
+  bottom: -2rem;
+}
+.nosotros {
+  display: flex;
+  flex-direction: row-reverse;
+}

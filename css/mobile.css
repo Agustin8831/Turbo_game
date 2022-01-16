@@ -1,0 +1,407 @@
+:root {
+  --color-white: #ffffff;
+  --color-black: rgb(0, 0, 0);
+  --color-black-soft: rgb(27, 27, 27);
+  --color-blue-1:#003b57;
+  --color-blue-2:#097993;
+  --color--blue-3:#00a1b8;
+  --color--blue-4:#54dbf0;
+  --color-pink-1:#900b46;
+  --color-pink-2:#ff64a2;
+  --sm: 1.2rem;
+  --md: 1.4rem;
+  --lg: 1.8rem;
+  --max: 2.4rem;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+.hdr {
+  width: 100%;
+  height: 28rem;
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+  background: rgb(255,100,162);
+  background: -moz-linear-gradient(180deg, rgba(255,100,162,1) 0%, rgba(0,178,215,0) 100%);
+  background: -webkit-linear-gradient(180deg, rgba(255,100,162,1) 0%, rgba(0,178,215,0) 100%);
+  background: linear-gradient(180deg, rgba(255,100,162,1) 0%, rgba(0,178,215,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff64a2",endColorstr="#00b2d7",GradientType=1);
+}
+.img-fondo-hdr {
+  width: 70rem;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+}
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icon-mando {
+  width: 6rem;
+  margin-top: 4rem;
+  filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(201deg) brightness(106%) contrast(106%); 
+}
+.title-hdr {
+  font-size: var(--max);
+  font-weight: 200;
+  margin: 0;
+}
+.nav {
+  width: 85%;
+  max-width: 45rem;
+  height: 5rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: .5rem;
+  list-style: none;
+  color: var(--color-black);
+  font-size: var(--md);
+  font-weight: 500;
+  display: flex;
+  overflow: hidden;
+  margin-top: 4rem;
+}
+.li-hdr {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  transition: .2s ease-in-out;
+}
+.li-hdr:hover {
+  background-color: var(--color-pink-2);
+}
+.card-sugerencias {
+  width: 100%;
+}
+.top-descargas {
+  background-color: #181818;
+  width: 100%;
+}
+.title-descargas {
+  padding: 2rem;
+  width: 100%;
+  height: 6rem;
+  border-bottom: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--sm);
+}
+.title-descargas h2 {
+  color: var(--color-white);
+  font-size: var(--md);
+  margin: 0;
+  font-weight: 300;
+}
+.title-descargas div {
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 1rem;
+  display: grid;
+  place-content: center;
+  color: #ff0000;
+  background-color: rgba(255, 0, 0, 0.287);
+}
+.games-cont {
+  width: 100%;
+  height: 35rem;
+  padding: 2rem;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.slide-cont {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(8, auto);
+  overflow-y: scroll;
+  overscroll-behavior-y: contain;
+  scroll-snap-type: y proximity;
+}
+.game-item {
+  scroll-snap-align: center;
+  width: 100%;
+  height: 10rem;
+  border-radius: .5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.game-item__img {
+  transition: .2s ease-in-out;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: -2;
+}
+.game-item__filtro {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: rgb(0,0,0);
+  background: -moz-linear-gradient(0deg, rgba(0,0,0,0.5777262180974478) 0%, rgba(0,178,215,0) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(0,0,0,0.5777262180974478) 0%, rgba(0,178,215,0) 100%);
+  background: linear-gradient(0deg, rgba(0,0,0,0.5777262180974478) 0%, rgba(0,178,215,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#00b2d7",GradientType=1);
+}
+.game-item__flecha {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 3px solid;
+  filter: invert(100%) sepia(93%) saturate(0%) hue-rotate(201deg) brightness(106%) contrast(106%); 
+  display: grid;
+  place-items: center;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+.game-item__flecha img {
+  width: 1rem;
+}
+.ranking-game {
+  width: 3rem;
+  height: 1.8rem;
+  background-color: red;
+  color: var(--color-white);
+  border-radius: 1rem;
+  display: grid;
+  place-content: center;
+  font-weight: 700;
+  font-size: var(--sm);
+  position: absolute;
+  top: 2.5rem;
+  left: 2rem;
+}
+.game-item__p {
+  color: var(--color-white);
+  font-size: var(--md);
+  font-weight: 700;
+  margin: 0;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+}
+.game-item:hover .game-item__img {
+  width: 120%;
+}
+.requisitos-pc {
+  border-top: 2px solid black;
+  background-color: #181818;
+  width: 100%;
+  padding: 2rem;
+}
+.requisitos-pc .title-requisitos {
+  display: none;
+}
+.requisitos-pc > div {
+  width: 100%;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-requisito {
+  width: 100%;
+}
+.card-requisito__cantidad {
+  width: 9rem;
+}
+.card-requisito__p {
+  margin: 0;
+}
+.ultimos-juegos {
+  background-color: #181818;
+  color: var(--color-white);
+  width: 100%;
+  height: 20rem;
+  display: grid;
+  place-items: center;
+  border-top: 2px solid red;
+  font-size: var(--lg);
+  text-align: center;
+  padding: 2rem;
+}
+.ultimos-juegos h2 {
+  font-weight: 300;
+}
+.ultimos-juegos span {
+  font-weight: 700;
+}
+.card-cont {
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  perspective: 10rem;
+  padding: 2rem;
+}
+.card-item-9 {
+  display: none;
+}
+.card {
+  width: 25rem;
+  height: 40rem;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.171);
+  transition: .2s ease-in-out;
+}
+.card:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.39);
+  transform: translateZ(.2rem);
+}
+.img-card {
+  width: 100%;
+  height: 16rem;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img-game-1 {
+  background-image: url(../assets/img/redredeptionll.jpg);
+}
+.img-game-2 {
+  background-image: url(../assets/img/cyberpunk.jpg);
+}
+.img-game-3 {
+  background-image: url(../assets/img/halo-infinite.jpg);
+}
+.img-game-4 {
+  background-image: url(../assets/img/valhalla.jpg);
+}
+.img-game-5 {
+  background-image: url(../assets/img/mass-effect.jpg);
+}
+.img-game-6 {
+  background-image: url(../assets/img/gta5.jpg);
+}
+.img-game-7 {
+  background-image: url(../assets/img/dead-cells.jpg);
+}
+.img-game-8 {
+  background-image: url(../assets/img/next-car.jpg);
+}
+.img-game-9 {
+  background-image: url(../assets/img/ruined-king.jpg);
+}
+.text-cont-card {
+  width: 100%;
+  height: 24rem;
+  background-color: var(--color-white);
+  padding: 2rem;
+  color: var(--color-black-soft);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title-card {
+  margin: 0;
+  font-size: var(--lg);
+  text-align: center;
+}
+.p-card {
+  text-align: justify;
+  font-size: var(--sm);
+  font-weight: 300;
+}
+.btn-dowload {
+  position: absolute;
+  bottom: 2rem;
+  width: 20rem;
+  height: 4rem;
+  background-color: var(--color-pink-1);
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  font-size: var(--sm);
+  font-weight: 700;
+  color: var(--color-white);
+  transition: .2s ease-in-out;
+}
+.btn-dowload:hover {
+  filter: brightness(1.3);
+}
+.nosotros {
+  margin-top: 2rem;
+  width: 100%; 
+}
+.nosotros-text-cont {
+  background-color: var(--color-black-soft);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title-nosotros {
+  text-align: center;
+  font-size: var(--lg);
+  font-weight: 700;
+  margin-top: 4rem;
+}
+.p-nosotros {
+  width: 85%;
+  max-width: 50rem;
+  text-align: justify;
+  font-size: var(--md);
+  font-weight: 300;
+}
+.btn-mas-inf {
+  position: relative;
+  bottom: 0;
+  margin-bottom: 4rem;
+}
+.img-fondo-nosotros {
+  width: 100%;
+  height: 35rem;
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../assets/img/games.jpg);
+}
+.footer {
+  width: 100%;
+  height: 5rem;
+  background-color: var(--color-blue-2);
+  position: absolute;
+  bottom: 0;
+  display: grid;
+  place-content: center;
+  color: var(--color-white);
+  font-size: var(--md);
+}
+.nombre-insta {
+  text-decoration: none;
+  color: var(--color-white);
+}

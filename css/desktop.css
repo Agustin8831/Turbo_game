@@ -1,0 +1,32 @@
+.img-fondo-hdr {
+  top: -20rem;
+}
+.contenedor-games {
+  width: 100%;
+  max-width: 116rem;
+  margin: 0 auto;
+}
+.games-cont {
+  padding: 2rem;
+  height: 50rem;
+}
+.card-cont {
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.card {
+  max-width: 30%;
+  height: 40rem;
+}
+.card-item-9 {
+  display: block;
+}
+.nosotros-text-cont {
+  width: 50%;
+}
+.img-fondo-nosotros {
+  width: 50%;
+  height: 35rem;
+  background-position: top; 
+}
